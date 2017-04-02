@@ -1,0 +1,34 @@
+{% extends 'NalbashgroupNalbashBundle:Default:index.html.twig' %}
+
+{% block stylesheet %}
+{{ parent() }}
+<link href="{{ asset('css/form.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}
+- edit
+{% endblock %}
+
+{% block header %}
+- edit
+{% endblock %}
+
+{% block body %}
+    <h1>Coin edit</h1>
+    {{ form_start(edit_form) }}
+    {{ form_row(edit_form.country) }}
+    {{ form_row(edit_form.year) }}
+    {{ form_row(edit_form.denomination) }}
+    {{ form_row(edit_form.name) }}
+    <input type="submit" value="Edit" />
+
+    {{ form_end(edit_form) }}
+{% endblock %}
+
+{% block saidbar %}
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+{% endblock %}

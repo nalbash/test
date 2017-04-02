@@ -1,0 +1,62 @@
+* {
+    margin:             0;
+    padding:            0;
+}
+
+body {
+    margin:             0 auto 0 auto;
+    font-weight:        bold;
+    font-family:        Arial, sans-serif;
+    line-height:        20px;
+    width:              800px;
+}
+
+ol, ul {
+    list-style:         none;
+}
+
+#header {
+    border-radius:      10px 10px 0 0;
+    padding:            20px;
+    background:         #009F00;
+    color:              white;
+    width:              760px;
+    height:             110px;
+}
+
+#saidbar {
+    padding:            20px;
+    float:              right;
+    width:              160px;
+
+}
+
+#body {
+    background:         #009F00;
+}
+
+#content {
+    padding:            20px;
+    background:         #00009F;
+    color:              white;
+    width:              560px;
+    margin:             0 200px 0 0;
+}
+
+#footer {
+    border-radius:      0 0 10px 10px;
+    background:         #009F00;
+    color:              white;
+    padding:            20px;
+    width:              760px;
+    height:             110px;
+}
+
+a {
+    color:              #fff;
+}
+
+a:hover {
+    color:              #888;
+}
+

@@ -1,0 +1,51 @@
+{% extends 'NalbashgroupNalbashBundle:Default:index.html.twig' %}
+{% block title %}
+- coins list
+{% endblock %}
+
+{% block header %}
+- coins list
+{% endblock %}
+{% block body %}
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Denomination</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coin in coins %}
+            <tr>
+                <td><a href="{{ path('coin_show', { 'id': coin.id }) }}">{{ coin.id }}</a></td>
+                <td>{{ coin.name }}</td>
+                <td>{{ coin.country }}</td>
+                <td>{{ coin.denomination }}</td>
+                <td>{{ coin.year }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('coin_show', { 'id': coin.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('coin_edit', { 'id': coin.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
+
+{% block saidbar %}
+        <li>
+            <a href="{{ path('coin_new') }}">Create a new coin</a>
+        </li>
+{% endblock %}

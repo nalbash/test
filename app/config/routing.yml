@@ -1,0 +1,3 @@
+nalbashgroup_nalbash:
+    resource: "@NalbashgroupNalbashBundle/Controller/"
+    type:     annotation

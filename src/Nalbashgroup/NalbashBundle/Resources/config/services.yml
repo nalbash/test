@@ -1,0 +1,4 @@
+services:
+    nalbashgroup_nalbash.example:
+         class: Nalbashgroup\NalbashBundle\Services\MyFirstServices
+         arguments: []

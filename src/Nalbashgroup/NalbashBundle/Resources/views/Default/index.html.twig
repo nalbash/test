@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    {% block stylesheet %}
+        <link href="{{ asset('css/index.css') }}" type="text/css" rel="stylesheet" />
+    {% endblock %}
+    <title>my collection coins {% block title %} - homepage{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    <div id="header">
+        my collection coins {% block header %} - homepage{% endblock %}
+    </div>
+    <div id="body">
+        <div id="saidbar">
+            <ul>
+                <li>
+                    <a href="{{ path('my_about') }}">About</a>
+                </li>
+                <li>
+                    <a href="{{ path('coin_index') }}">Back to the list</a>
+                </li>
+                {% block saidbar %}{% endblock %}
+            </ul>
+        </div>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+    <div id="footer">
+        <a href="{{ path('my_index') }}">my collection coins{% block footer %} - homepage{% endblock %}.</a> nalbash
+    </div>
+</body>
+</html>
